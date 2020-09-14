@@ -32,6 +32,20 @@ git config mergetool.prompt false
 git config --global core.editor "vim"
 git config --global mergetool.keepBackup false
 
+
+# https://www.mfitzp.com/article/add-git-branch-name-to-terminal-prompt-mac/
+cat << 'EOF' >> ~/.bashrc
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+if [[ ${EUID} == 0 ]] ; then
+  PS1="\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$(parse_git_branch)\$\[\033[00m\] "
+else
+  PS1="\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$(parse_git_branch)\$\[\033[00m\] "
+fi
+EOF
+
+
 # https://junegunn.kr/2016/07/fzf-git/
 # https://gist.github.com/junegunn/8b572b8d4b5eddd8b85e5f4d40f17236
 git clone git@github.com:edtan/dotfiles.git
