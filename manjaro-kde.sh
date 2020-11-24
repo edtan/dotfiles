@@ -16,6 +16,7 @@ sudo pacman -S \
   go \
   gvim \
   graphviz \
+  helm \
   keepassxc \
   kubectl \
   python-graphviz \
