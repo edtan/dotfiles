@@ -7,12 +7,39 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 sudo pacman -Syu
 
 sudo pacman -S \
+  cmake \
+  code \
+  docker \
+  docker-compose \
+  freerdp \
   fzf \
-  graphviz \
-  python-graphviz \
+  go \
   gvim \
+  graphviz \
+  keepassxc \
+  kubectl \
+  python-graphviz \
+  terraform \
   tree \
   xclip
+
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo usermod -aG docker $USER
+
+echo "alias k='kubectl'" >> ~/.bashrc
+
+# https://kind.sigs.k8s.io/docs/user/quick-start/
+GO111MODULE="on" go get sigs.k8s.io/kind@v0.9.0
+echo 'export PATH="$(go env GOPATH)/bin:$PATH"' >> ~/.bashrc
+
+# AUR setup and install AUR packages
+#  openvpn-update-resolv-conf-git
+# slack-desktop
+
+# For spotify, we need to import the key, https://aur.archlinux.org/packages/spotify/
+# curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
+# spotify
 
 # install vim plugins
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
