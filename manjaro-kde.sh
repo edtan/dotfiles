@@ -13,9 +13,11 @@ sudo pacman -S \
   docker-compose \
   freerdp \
   fzf \
+  geckodriver \
   go \
   gvim \
   graphviz \
+  jdk8-openjdk \
   helm \
   keepassxc \
   kubectl \
@@ -32,6 +34,8 @@ sudo systemctl start docker
 sudo usermod -aG docker $USER
 
 echo "alias k='kubectl'" >> ~/.bashrc
+
+echo 'source /usr/share/git/completion/git-completion.bash' >> ~/.bashrc
 
 # https://kind.sigs.k8s.io/docs/user/quick-start/
 GO111MODULE="on" go get sigs.k8s.io/kind@v0.9.0
@@ -52,6 +56,9 @@ nvm use --lts
 
 # serverless
 npm install -g serverless
+# https://github.com/serverless/serverless/issues/5124
+# remove annoying plugin automatically installed by serverless
+sed -i '/tabtab/d' ~/.bashrc
 
 # install vim plugins
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
