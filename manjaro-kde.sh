@@ -68,11 +68,14 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 cd ~/.vim/bundle
 git clone https://github.com/mbbill/undotree.git
 git clone https://github.com/tpope/vim-fugitive.git
+# Install help for vim-fugitive
+vim -u NONE -c "helptags vim-fugitive/doc" -c q
 git clone https://github.com/tpope/vim-commentary.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/dense-analysis/ale.git
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/tpope/vim-rhubarb
+
 
 # setup git
 git config --global user.name "Ed Tan"
