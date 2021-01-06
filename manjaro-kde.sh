@@ -11,6 +11,7 @@ sudo pacman -S \
   code \
   docker \
   docker-compose \
+  flake8 \
   freerdp \
   fzf \
   geckodriver \
@@ -23,6 +24,7 @@ sudo pacman -S \
   kubectl \
   nvm \
   python-graphviz \
+  python-language-server \
   terraform \
   tree \
   ttf-ms-fonts \
@@ -68,6 +70,7 @@ git clone https://github.com/mbbill/undotree.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/tpope/vim-commentary.git
 git clone https://github.com/tpope/vim-surround.git
+git clone https://github.com/dense-analysis/ale.git
 
 # setup git
 git config --global user.name "Ed Tan"
