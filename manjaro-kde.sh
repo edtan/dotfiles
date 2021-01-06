@@ -72,6 +72,7 @@ git clone https://github.com/tpope/vim-commentary.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/dense-analysis/ale.git
 git clone https://github.com/junegunn/fzf.vim
+git clone https://github.com/tpope/vim-rhubarb
 
 # setup git
 git config --global user.name "Ed Tan"
