@@ -68,9 +68,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 cd ~/.vim/bundle
 git clone https://github.com/mbbill/undotree.git
 git clone https://github.com/tpope/vim-fugitive.git
-vim -u NONE -c "helptags vim-fugitive/doc" -c q
 git clone https://github.com/tpope/vim-unimpaired
-vim -u NONE -c "helptags vim-unimpaired/doc" -c q
 git clone https://github.com/tpope/vim-commentary.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/dense-analysis/ale.git
