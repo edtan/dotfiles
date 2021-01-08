@@ -112,6 +112,8 @@ EOF
 git clone git@github.com:edtan/dotfiles.git
 sudo cp dotfiles/fzf-git/* /usr/share/fzf/
 
+# https://github.com/junegunn/fzf/issues/337#issuecomment-136383876
+echo "export FZF_DEFAULT_COMMAND='find .'" >> ~/.bashrc
 
 # source fzf scripts
 # https://wiki.archlinux.org/index.php/Fzf
