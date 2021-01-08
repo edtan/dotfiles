@@ -31,6 +31,14 @@ sudo pacman -S \
   vagrant \
   xclip
 
+curl -L https://github.com/nektos/act/releases/download/v0.2.17/act_Linux_x86_64.tar.gz -o act.tar.gz
+TMP_INSTALL_DIR='/tmp/act-install'
+mkdir "$TMP_INSTALL_DIR"
+tar xzf act.tar.gz -C "$TMP_INSTALL_DIR"
+sudo mv "$TMP_INSTALL_DIR/act" /usr/local/bin/act
+sudo rm -rf "$TMP_INSTALL_DIR"
+rm act.tar.gz
+
 sudo systemctl enable docker
 sudo systemctl start docker
 sudo usermod -aG docker $USER
