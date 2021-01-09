@@ -77,13 +77,15 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 cd ~/.vim/bundle
 git clone https://github.com/mbbill/undotree.git
 git clone https://github.com/tpope/vim-fugitive.git
+git clone https://github.com/tpope/vim-rhubarb
 git clone https://github.com/tpope/vim-unimpaired
 git clone https://github.com/tpope/vim-commentary.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/dense-analysis/ale.git
+git clone git@github.com:natebosch/vim-lsc.git
 git clone https://github.com/junegunn/fzf.vim
-git clone https://github.com/tpope/vim-rhubarb
-
+git clone https://github.com/hashivim/vim-terraform.git
+git clone git@github.com:godlygeek/tabular.git
 
 # setup git
 git config --global user.name "Ed Tan"
