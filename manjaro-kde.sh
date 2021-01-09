@@ -25,6 +25,7 @@ sudo pacman -S \
   nvm \
   python-graphviz \
   python-language-server \
+  signal-desktop \
   terraform \
   tree \
   ttf-ms-fonts \
