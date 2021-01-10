@@ -23,8 +23,10 @@ sudo pacman -S \
   keepassxc \
   kubectl \
   nvm \
+  python-black \
   python-graphviz \
   python-language-server \
+  python-isort \
   signal-desktop \
   terraform \
   tree \
