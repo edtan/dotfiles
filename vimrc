@@ -165,6 +165,16 @@ nnoremap <leader>eg :tabe ~/.config/git/ignore<cr>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
+" Window navigation shortcuts
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+tnoremap <C-h> <C-w>h
+tnoremap <C-j> <C-w>j
+tnoremap <C-k> <C-w>k
+tnoremap <C-l> <C-w>l
+
 " Autocompletion shortcuts, see :help ins-comp
 inoremap <C-]> <C-x><C-]>
 inoremap <C-f> <C-x><C-f>
