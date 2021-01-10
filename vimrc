@@ -181,7 +181,7 @@ inoremap <C-f> <C-x><C-f>
 inoremap <C-d> <C-x><C-d>
 inoremap <C-l> <C-x><C-l>
 
-tnoremap <C-[> <C-\><C-n>
+tnoremap jk <C-\><C-n>
 tnoremap <C-r> <C-w>"
 
 """"""""""" Plugin Mappings {{{2
