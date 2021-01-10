@@ -74,9 +74,8 @@ npm install -g serverless
 sed -i '/tabtab/d' ~/.bashrc
 
 # install vim plugins
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-cd ~/.vim/bundle
+mkdir -p ~/.vim/pack/bundle/start
+cd ~/.vim/pack/bundle/start
 git clone https://github.com/mbbill/undotree.git
 git clone https://github.com/tpope/vim-fugitive.git
 git clone https://github.com/tpope/vim-rhubarb
