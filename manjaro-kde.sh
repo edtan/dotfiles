@@ -42,8 +42,9 @@ sudo mv "$TMP_INSTALL_DIR/act" /usr/local/bin/act
 sudo rm -rf "$TMP_INSTALL_DIR"
 rm act.tar.gz
 
-sudo systemctl enable docker
-sudo systemctl start docker
+# github.com/moby/mob/issues/38373
+sudo systemctl enable docker.socket
+sudo systemctl start docker.socket
 sudo usermod -aG docker $USER
 
 echo "alias k='kubectl'" >> ~/.bashrc
@@ -135,3 +136,7 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 EOF
+
+echo "Checking grub timeout...  If non-zero, change it to 0 and then run 'sudo update-grub'"
+cat /etc/default/grub | grep GRUB_TIMEOUT
+# sudo update-grub
