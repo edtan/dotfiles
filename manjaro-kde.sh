@@ -34,7 +34,7 @@ sudo pacman -S \
   vagrant \
   xclip
 
-curl -L https://github.com/nektos/act/releases/download/v0.2.17/act_Linux_x86_64.tar.gz -o act.tar.gz
+curl -L https://github.com/nektos/act/releases/download/v0.2.18/act_Linux_x86_64.tar.gz -o act.tar.gz
 TMP_INSTALL_DIR='/tmp/act-install'
 mkdir "$TMP_INSTALL_DIR"
 tar xzf act.tar.gz -C "$TMP_INSTALL_DIR"
