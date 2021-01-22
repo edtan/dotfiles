@@ -81,6 +81,10 @@ if executable(s:clip)
 
     " Install fzf for windows (assume it is installed via git)
     set rtp+=~/.fzf
+
+    " https://github.com/Microsoft/WSL/issues/2183#issuecomment-315881809
+    " fix mouse in windows
+    set ttymouse=sgr
 endif
 """"""""""" General settings }}}1
 
