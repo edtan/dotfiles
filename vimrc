@@ -170,14 +170,19 @@ nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
 " Window navigation shortcuts
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-tnoremap <C-h> <C-w>h
-tnoremap <C-j> <C-w>j
-tnoremap <C-k> <C-w>k
-tnoremap <C-l> <C-w>l
+" https://vim.fandom.com/wiki/Get_Alt_key_to_work_in_terminal
+set <M-h>=h
+set <M-j>=j
+set <M-k>=k
+set <M-l>=l
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+tnoremap <M-h> <C-w>h
+tnoremap <M-j> <C-w>j
+tnoremap <M-k> <C-w>k
+tnoremap <M-l> <C-w>l
 
 " Autocompletion shortcuts, see :help ins-comp
 inoremap <C-]> <C-x><C-]>
