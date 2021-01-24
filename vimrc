@@ -134,6 +134,8 @@ let g:netrw_liststyle = 3
 " If netrw clobbers statusline on error, easiest way to resolve is to simply
 " source this vimrc again (use <leader>sv)
 let g:netrw_use_errorwindow = 0
+" Set preview window to bottom
+let g:netrw_alto   = 0
 " Autolaunch netrw.  https://stackoverflow.com/questions/63238533/autoload-netrw-when-starting-vim
 augroup InitNetrw
   autocmd!
