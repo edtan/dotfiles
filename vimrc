@@ -134,6 +134,11 @@ let g:netrw_liststyle = 3
 " If netrw clobbers statusline on error, easiest way to resolve is to simply
 " source this vimrc again (use <leader>sv)
 let g:netrw_use_errorwindow = 0
+" Autolaunch netrw.  https://stackoverflow.com/questions/63238533/autoload-netrw-when-starting-vim
+augroup InitNetrw
+  autocmd!
+  autocmd VimEnter * if expand("%") == "" | 20Lexplore | endif
+augroup END
 
 " episode 1 http://vimcasts.org/episodes/show-invisibles/
 nnoremap <leader>l :set list!<cr>
