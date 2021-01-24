@@ -127,8 +127,13 @@ nnoremap <leader>w :set wrap!<cr>
 nnoremap <leader>n :set relativenumber!<cr>
 
 " Shortcut to launch netrw
-let g:netrw_liststyle = 3
 nnoremap <leader>f :20Lexplore<cr>
+" Default to tree style
+let g:netrw_liststyle = 3
+" Use window instead of popups - popup cause issues being closed.
+" If netrw clobbers statusline on error, easiest way to resolve is to simply
+" source this vimrc again (use <leader>sv)
+let g:netrw_use_errorwindow = 0
 
 " episode 1 http://vimcasts.org/episodes/show-invisibles/
 nnoremap <leader>l :set list!<cr>
