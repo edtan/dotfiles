@@ -128,6 +128,8 @@ nnoremap <leader>n :set relativenumber!<cr>
 
 " Make current file's directory current dir
 noremap <leader>c :cd %:p:h<cr>
+" Copy current directory into unnamed register
+noremap <leader>d :let @"=expand('%:p:h')<cr>
 
 " Shortcut to launch netrw
 nnoremap <leader>f :20Lexplore<cr>
@@ -249,7 +251,6 @@ let g:ale_fixers = {
 augroup run_shortcuts
   autocmd!
   autocmd FileType python3 nnoremap <leader>r :!python3 %<cr>
-  autocmd FileType python3 nnoremap <leader>d :!python3 -m pdb %<cr>
 
   autocmd FileType c nnoremap <leader>r :!gcc % -o %:r.o; ./%:r.o <cr>
   autocmd FileType arduino nnoremap <leader>r :!gcc % -o %:r.o; ./%:r.o <cr>
