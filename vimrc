@@ -126,6 +126,9 @@ inoremap jk <ESC>
 nnoremap <leader>w :set wrap!<cr>
 nnoremap <leader>n :set relativenumber!<cr>
 
+" Make current file's directory current dir
+noremap <leader>c :cd %:p:h<cr>
+
 " Shortcut to launch netrw
 nnoremap <leader>f :20Lexplore<cr>
 " Default to tree style
