@@ -7,6 +7,8 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 sudo pacman -Syu
 
 sudo pacman -S \
+  clang \
+  cpio \
   cmake \
   code \
   docker \

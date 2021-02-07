@@ -239,7 +239,15 @@ let g:lsc_server_commands = {
       \    "command": "/home/ed/personal/src/cicdmanager/terraform/remote-state/tf-spy.sh",
       \    "log_level": -1,
       \    "suppress_stderr": v:true,
-      \  }
+      \  },
+      \ 'cpp': {
+      \   'command': 'clangd --background-index',
+      \   'suppress_stderr': v:true
+      \  },
+      \ 'c': {
+      \   'command': 'clangd --background-index',
+      \   'suppress_stderr': v:true
+      \  },
       \}
 
 let g:ale_fixers = {
