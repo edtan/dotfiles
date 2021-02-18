@@ -7,12 +7,14 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 sudo pacman -Syu
 
 sudo pacman -S \
+  aws-cli \
   clang \
   cpio \
   cmake \
   code \
   docker \
   docker-compose \
+  efibootmgr \
   flake8 \
   freerdp \
   fzf \
@@ -143,6 +145,13 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 fi
 EOF
 
-echo "Checking grub timeout...  If non-zero, change it to 0 and then run 'sudo update-grub'"
+echo "Checking grub timeout...  If non-zero, change it to 0 and then run 'sudo update-grub'.  alternatively, set timeout to 1 and timeout style to menu"
 cat /etc/default/grub | grep GRUB_TIMEOUT
 # sudo update-grub
+
+# set efibootmgr timeout to 0 (seems to default to 5)
+# sudo efibootmgr -t 0
+
+
+# other
+# https://hackmd.io/@dasgeek/S186eNUxL
