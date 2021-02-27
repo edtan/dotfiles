@@ -96,6 +96,7 @@ git clone git@github.com:natebosch/vim-lsc.git
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/hashivim/vim-terraform.git
 git clone git@github.com:godlygeek/tabular.git
+git clone https://github.com/tpope/vim-vinegar.git
 
 # setup git
 git config --global user.name "Ed Tan"
