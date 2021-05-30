@@ -27,6 +27,7 @@ sudo pacman -S \
   keepassxc \
   kubectl \
   nvm \
+  packer \
   python-black \
   python-graphviz \
   python-language-server \
