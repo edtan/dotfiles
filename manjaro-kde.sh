@@ -36,6 +36,7 @@ sudo pacman -S \
   terraform \
   tree \
   ttf-ms-fonts \
+  unzip  \
   vagrant \
   virtualbox \
   virtualbox-host-dkms \
