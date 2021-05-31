@@ -23,6 +23,7 @@ sudo pacman -S \
   gvim \
   graphviz \
   jdk8-openjdk \
+  jq \
   helm \
   keepassxc \
   kubectl \
