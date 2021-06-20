@@ -40,6 +40,7 @@ sudo pacman -S \
   ttf-ms-fonts \
   unzip  \
   vagrant \
+  vault \
   virtualbox \
   virtualbox-host-dkms \
   wireshark-qt \
