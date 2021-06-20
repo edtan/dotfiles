@@ -45,6 +45,7 @@ sudo pacman -S \
   virtualbox-host-dkms \
   wireshark-qt \
   xclip \
+  yarn \
   zip
 
 curl -L https://github.com/nektos/act/releases/download/v0.2.18/act_Linux_x86_64.tar.gz -o act.tar.gz
