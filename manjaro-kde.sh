@@ -45,7 +45,6 @@ sudo pacman -S \
   virtualbox-host-dkms \
   wireshark-qt \
   xclip \
-  yarn \
   zip
 
 curl -L https://github.com/nektos/act/releases/download/v0.2.18/act_Linux_x86_64.tar.gz -o act.tar.gz
@@ -154,6 +153,10 @@ EOF
 
 echo "Checking grub timeout...  If non-zero, change it to 0 and then run 'sudo update-grub'.  alternatively, set timeout to 1 and timeout style to menu"
 cat /etc/default/grub | grep GRUB_TIMEOUT
+# GRUB_TIMEOUT=0
+# GRUB_TIMEOUT_STYLE=hidden
+# or...
+# GRUB_TIMEOUT_STYLE=menu
 # sudo update-grub
 
 # set efibootmgr timeout to 0 (seems to default to 5)
