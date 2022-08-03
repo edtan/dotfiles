@@ -145,6 +145,9 @@ let g:netrw_preview = 1
 let g:netrw_alto = 0
 " Set preview window size
 let g:netrw_winsize = 30
+" Fix Browse
+" https://github.com/vim/vim/issues/4738#issuecomment-1023283328
+let g:netrw_browsex_viewer= "open"
 " Autolaunch netrw.  https://stackoverflow.com/questions/63238533/autoload-netrw-when-starting-vim
 augroup InitNetrw
   autocmd!
