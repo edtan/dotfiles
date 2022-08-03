@@ -67,7 +67,7 @@ endif
 
 " WSL yank support
 " https://superuser.com/a/1557751
-let s:clip = '/c/Windows/System32/clip.exe'
+let s:clip = '/mnt/c/Windows/System32/clip.exe'
 if executable(s:clip)
     augroup WSLYank
         autocmd!
@@ -139,8 +139,12 @@ let g:netrw_liststyle = 3
 " If netrw clobbers statusline on error, easiest way to resolve is to simply
 " source this vimrc again (use <leader>sv)
 let g:netrw_use_errorwindow = 0
-" Set preview window to bottom
-let g:netrw_alto   = 0
+" Set preview window to vertical
+let g:netrw_preview = 1
+" Set preview window to open on right
+let g:netrw_alto = 0
+" Set preview window size
+let g:netrw_winsize = 30
 " Autolaunch netrw.  https://stackoverflow.com/questions/63238533/autoload-netrw-when-starting-vim
 augroup InitNetrw
   autocmd!
