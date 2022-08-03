@@ -61,6 +61,10 @@
       # Config for prompt. PS1 synonym.
       # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
       prompt='%0/ $(git_branch_name) %# '
+
+      # https://superuser.com/a/1522945
+      bindkey '^[[1;5D' backward-word
+      bindkey '^[[1;5C' forward-word
     '';
   };
 
