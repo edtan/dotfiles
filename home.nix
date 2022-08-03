@@ -1,5 +1,31 @@
 { config, lib, pkgs, ... }:
 
+let 
+  # compile with darwin support (and xterm_clipboard disabled)
+  # https://github.com/vim/vim/issues/2528
+  # https://hardselius.github.io/vim-nix-darwin/
+  # https://github.com/Homebrew/legacy-homebrew/issues/32875
+  # https://unix.stackexchange.com/questions/117073/configuring-vim-with-clientserver-and-clipboard
+  # https://github.com/vim/vim/issues/203
+  # https://github.com/nix-community/home-manager/issues/412
+  my_vim_configurable = pkgs.vim_configurable.override {
+    guiSupport = "no";
+    darwinSupport = true;
+  };
+
+  my_vimPlugins = with pkgs.vimPlugins; [
+    vim-fugitive
+    vim-rhubarb
+    vim-unimpaired
+    vim-commentary
+    vim-surround
+    vim-vinegar
+    undotree
+    fzf-vim
+  ];
+
+in
+
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -12,6 +38,13 @@
   home.packages = [
     pkgs.jq
     pkgs.tree
+    (my_vim_configurable.customize {
+      name = "vim";
+      vimrcConfig.customRC = builtins.readFile /Users/ed/dotfiles/vimrc;
+      vimrcConfig.packages.myVimPackages = {
+        start = my_vimPlugins;
+      };
+    })
   ];
 
   # This value determines the Home Manager release that your
@@ -80,18 +113,4 @@
     userEmail = "edtan@users.noreply.github.com";
   };
 
-  programs.vim = {
-    enable = true;
-    extraConfig = builtins.readFile /Users/ed/dotfiles/vimrc;
-    plugins = with pkgs.vimPlugins; [
-      vim-fugitive
-      vim-rhubarb
-      vim-unimpaired
-      vim-commentary
-      vim-surround
-      vim-vinegar
-      undotree
-      fzf-vim
-    ];
-  };
 }
