@@ -37,6 +37,7 @@ in
 
   home.packages = [
     pkgs.jq
+    pkgs.llvm
     pkgs.tree
     (my_vim_configurable.customize {
       name = "vim";
@@ -98,6 +99,8 @@ in
       # https://superuser.com/a/1522945
       bindkey '^[[1;5D' backward-word
       bindkey '^[[1;5C' forward-word
+
+      export PATH="/Users/ed/.ghcup/bin:$PATH"
     '';
   };
 
